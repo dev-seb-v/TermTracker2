@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TermTracker.Views.EditAssessmentPage">
+    <ContentPage.Content>
+		<StackLayout>
+			<StackLayout Margin="20" Padding="10">
+				<Label Text="Please Choose an Assessment to Edit"
+					   FontAttributes="Bold"/>
+				<Picker x:Name="AssessmentPicker" Title="Choose Assessment To Edit"
+						SelectedIndexChanged="AssessmentPicker_SelectedIndexChanged"
+						FontAttributes="Bold"/>
+			</StackLayout>
+			<StackLayout Padding="10" Margin="10" x:Name="OAstackLayout">
+				<Label Text="Objective Assessment" FontAttributes="Bold"/>
+				<Entry x:Name="objAssessmentNameEntry" Placeholder="enter obj assessment name"/>
+				<Label Text="Due Date"/>
+				<DatePicker x:Name="objAssessmentDueDatePicker"/>
+				<Entry x:Name="ObjNotesEntry" Placeholder="enter notes"/>
+				<Button Text="Delete"
+						x:Name="DeleteObjAssessmentButton"
+						Clicked="DeleteObjAssessmentButton_Clicked"/>
+				<Button Text="Update"
+						x:Name="UpdateObjAssessmentButton"
+						Clicked="UpdateObjAssessmentButton_Clicked"/>
+			</StackLayout>
+
+			<StackLayout x:Name="PAstackLayout" Margin="20" Padding="10">
+				<Label Text="Performance Assessment" FontAttributes="Bold"/>
+				<Entry x:Name="perfAssessmentNameEntry" Placeholder="enter name"/>
+				<Label Text="Due Date"/>
+				<DatePicker x:Name="perfAssessmentDueDatePicker"/>
+				<Entry x:Name="PerfNotesEntry" Placeholder="enter notes"/>
+				<Button Text="Delete"
+						x:Name="DeletePerfAssessmentButton"
+						Clicked="DeletePerfAssessmentButton_Clicked"/>
+				<Button Text="Update"
+						x:Name="UpdatePerfAssessmentButton"
+						Clicked="UpdatePerfAssessmentButton_Clicked"/>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<Button Text="Cancel" x:Name="CancelButton" Clicked="CancelButton_Clicked"/>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
